@@ -1,10 +1,11 @@
 Feature: To understand Scenario Outline
-
+  @scenario1
   Scenario: Sample Scenario #1
     Given my Account balance is $100
     When I withdraw $50
     Then the account balance should become $50
 
+    @scenario2
   Scenario: Sample Scenario #2
     Given my Account balance is $50
     When I withdraw $50

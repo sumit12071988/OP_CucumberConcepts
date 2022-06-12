@@ -9,12 +9,9 @@
   # 1 USER STORY ==> 1 FEATURE
   # 1 FEATURE ==> 1 OR more USER STORIES
 
-@dummyTag
+@2ndFeature
 Feature: Add to cart
 # Description will be the USER STORY represented in Agile by BA in Confluence in JIRA
-  As a customer of xyz app              ==> Represents ACTOR
-  I want to add a product to the cart   ==> Represents ACTION that ACTOR need to perform
-  So that I can purchase the product    ==> Represents OUTCOME of the ACTION done by the ACTOR
 
 # From Cucumber perspective, Title after "Feature:" keyword and descriptions below the "Feature: " keyword
 #   will be ignored at runtime, but this info will appear in report. Thus putting above info is important from
@@ -26,8 +23,6 @@ Feature: Add to cart
 # Each Rule can have its own Background
   Rule: rule #1
     Background: Sample Background for rule #1
-
-
     Scenario: Dummy Scenario title
     Dummy Scenario Description
       # A SCENARIO is same as Test Scenario/ Test Case we write for a Feature

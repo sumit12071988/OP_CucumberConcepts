@@ -35,3 +35,11 @@ Feature: Add to cart
       When I add "Blue Shoes" to the Cart
       Then I see 1 "Blue Shoes" in the Cart
 
+    @scenario3
+    Scenario Outline: Adding 1 Product to Cart - Using Examples
+      Given I'm on Store page
+      When I add "<productName>" to the Cart
+      Then I see 1 "<productName>" in the Cart
+      Examples:
+        | productName |
+        | Blue Shoes  |

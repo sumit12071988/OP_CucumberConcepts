@@ -1,5 +1,6 @@
-package basics;
+package basics.stepDefinitions;
 
+import basics.domainObjects.Product;
 import io.cucumber.java.en.*;
 
 public class StepDefs {
@@ -259,7 +260,7 @@ public class StepDefs {
         System.out.println("theButtonChangesAndATickMarkIsShownInsideIt");
     }
 
-    @Given("I'm on Store page")
+    @Given("I'm on Store/Product page")
     public void iMOnStorePage() {
         System.out.println("iMOnStorePage");
     }
@@ -269,9 +270,34 @@ public class StepDefs {
         System.out.println("iAddToTheCart");
     }
 
-    @Then("I see {int} {string} in the Cart")
-    public void iSeeInTheCart(int arg0, String arg1) {
-        System.out.println("iSeeInTheCart");
+    @And("I add {int} {string}(s) in the cart")
+    public void iAddSInTheCart(int productCount, String productName) {
+        System.out.println("I'm adding: "+productCount+ " of: "+productName);
+    }
+
+    @Given("I'm on the store page")
+    public void iMOnTheStorePage() {
+        
+    }
+
+//    @ParameterType(".*")
+//    public Product product(String name){
+//        return new Product(name);
+//    }
+
+//    @ParameterType("\"Blue Shoes\"|\"Yellow Shoes\"")
+//    public Product product(String name){
+//        return new Product(name);
+//    }
+
+    @When("I add a {product} to the Cart")
+    public void iAddAToTheCart(Product product) {
+        System.out.println("----- Product name is: "+product.getProductName());
+    }
+
+    @Then("I see {int} {product} in the Cart")
+    public void iSeeInTheCart(int count, Product product) {
+        System.out.println("----- Product name is: "+product.getProductName());
     }
 }
 
