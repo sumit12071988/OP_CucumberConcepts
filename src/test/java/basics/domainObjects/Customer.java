@@ -1,25 +1,23 @@
 package basics.domainObjects;
 
 public class Customer {
-
-
     // Create two variables
-    private String customer;
+    private String username;
     private String password;
 
     // Create Constructor
-    public Customer(String customer, String password) {
-        this.customer = customer;
+    public Customer(String username, String password) {
+        this.username = username;
         this.password = password;
     }
 
     // Create Getters and Setters
-    public String getCustomer() {
-        return customer;
+    public String getUserName() {
+        return username;
     }
 
     public void setCustomer(String customer) {
-        this.customer = customer;
+        this.username = customer;
     }
 
     public String getPassword() {

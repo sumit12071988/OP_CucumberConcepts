@@ -21,7 +21,7 @@ Feature: Add to cart
   Background: Sample Background
 
 # Each Rule can have its own Background
-  Rule: rule #1
+  Rule: Rule1
     Background: Sample Background for rule #1
     Scenario: Dummy Scenario title
     Dummy Scenario Description
