@@ -28,7 +28,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.UNDERSCORE;
                     snippets    = UNDERSCORE,                                      // Used to specify the format in which the undefined methods will be auto generated. Options: CAMELCASE, UNDERSCORE
                     dryRun      = false,                                           // Used to check Feature files with missing Step Definitions without executing Step Definitions
                     monochrome  = false,                                           // If set as true, it is used to display Console O/p in Black-N-White
-                    tags        = "@Feature1"                                      // Executes scenarios with @scenario1 tag
+                    tags        = "@featureTag1"                                      // Executes scenarios with @scenario1 tag
 //                    tags        = "not @scenario1"                                 // Executes all scenarios EXCEPT the one with @scenario1 tag
 //                    tags        = "@scenario1 or @scenario2"                       // Executes all those scenarios who have either @scenario1 OR @scenario2 tag
 //                    tags        = "@scenario1 and @scenario2"                      // Executes all those scenarios who have BOTH @scenario1 AND @scenario2 tag

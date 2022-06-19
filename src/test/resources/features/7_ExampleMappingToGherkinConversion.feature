@@ -41,5 +41,8 @@ Feature: Add to cart
       When I add "<productName>" to the Cart
       Then I see 1 "<productName>" in the Cart
       Examples:
-        | productName |
-        | Blue Shoes  |
+        | productName  |
+        | Blue Shoes   |
+        | Yellow Shoes |
+#        | Red Shoes    |
+#        | Green Shoes  |

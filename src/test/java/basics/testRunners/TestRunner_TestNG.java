@@ -18,14 +18,14 @@ import static io.cucumber.testng.CucumberOptions.SnippetType.UNDERSCORE;
                                     "basics.customParameterTypes"
                                   },
                     plugin      = {
-                                    "pretty",                                      // Generates the Scenario info in Console along with the location of Step Definitions
+//                                    "pretty",                                      // Generates the Scenario info in Console along with the location of Step Definitions
                                     "html:target/cucumber.html",                   // Generates an HTML report with all Scenarios
                                     "summary"                                      // Used as prerequisite in order to use Cucumber Option "snippets"
                                   },
                     snippets    = UNDERSCORE,                                      // Used to specify the format in which the undefined methods will be auto generated. Options: CAMELCASE, UNDERSCORE
 //                    dryRun      = true,                                            // Used to check Feature files with missing Step Definitions without executing Step Definitions
 //                    monochrome  = true,                                            // If set as true, it is used to display Console O/p in Black-N-White
-                    tags        = "@DataTableFeature"                               // Executes scenarios with @scenario1 tag
+                    tags        = "@featureTag1"                               // Executes scenarios with @scenario1 tag
 //                    tags        = "not @scenario1"                                 // Executes all scenarios EXCEPT the one with @scenario1 tag
 //                    tags        = "@scenario1 or @scenario2"                       // Executes all those scenarios who have either @scenario1 OR @scenario2 tag
 //                    tags        = "@scenario1 and @scenario2"                      // Executes all those scenarios who have BOTH @scenario1 AND @scenario2 tag
@@ -37,11 +37,11 @@ public class TestRunner_TestNG extends AbstractTestNGCucumberTests {
 
     @BeforeClass
     public void setup() {
-        System.out.println("---- BEFORE TESTNG CLASS INVOKED -----");
+        System.out.println("---- @BeforeClass -----");
     }
 
     @AfterClass
     public void tearDown() {
-        System.out.println("---- AFTER TESTNG CLASS INVOKED -----");
+        System.out.println("---- @AfterClass -----");
     }
 }

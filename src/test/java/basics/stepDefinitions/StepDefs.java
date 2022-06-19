@@ -1,6 +1,7 @@
 package basics.stepDefinitions;
 
 import basics.domainObjects.Product;
+import io.cucumber.java.ParameterType;
 import io.cucumber.java.en.*;
 
 public class StepDefs {
@@ -260,6 +261,12 @@ public class StepDefs {
         System.out.println("theButtonChangesAndATickMarkIsShownInsideIt");
     }
 
+    @And("I add {int} {string}(s) in the cart")
+    public void iAddSInTheCart(int productCount, String productName) {
+        System.out.println("iAddSInTheCart");
+        System.out.println("I'm adding: " + productCount + " of: " + productName);
+    }
+
     @Given("I'm on Store/Product page")
     public void iMOnStorePage() {
         System.out.println("iMOnStorePage");
@@ -270,14 +277,17 @@ public class StepDefs {
         System.out.println("iAddToTheCart");
     }
 
-    @And("I add {int} {string}(s) in the cart")
-    public void iAddSInTheCart(int productCount, String productName) {
-        System.out.println("I'm adding: "+productCount+ " of: "+productName);
+    // ----------------------------------------------------------------------------------------------------
+    @ParameterType(".*")    // Other option:  "\"Blue Shoes\"|\"Yellow Shoes\""
+    public Product product(String name) {
+        return new Product(name);
     }
 
-    @Given("I'm on the store page")
-    public void iMOnTheStorePage() {
-        
+    @Then("I see {int} {product} in the Cart")
+    public void iSeeInTheCart(int count, Product product) {
+        // By this line, Class reference product become Product object.
+        System.out.println("iSeeInTheCart");
+//        System.out.println("----- Product name is: " + product.getProductName());
     }
 
 //    @ParameterType(".*")
@@ -292,12 +302,13 @@ public class StepDefs {
 
     @When("I add a {product} to the Cart")
     public void iAddAToTheCart(Product product) {
-        System.out.println("----- Product name is: "+product.getProductName());
+        System.out.println("----- Product name is: " + product.getProductName());
     }
 
-    @Then("I see {int} {product} in the Cart")
-    public void iSeeInTheCart(int count, Product product) {
-        System.out.println("----- Product name is: "+product.getProductName());
+
+    @Given("I'm on the Store Page")
+    public void iMOnTheStorePage() {
+        System.out.println("iMOnTheStorePage");
     }
 }
 
